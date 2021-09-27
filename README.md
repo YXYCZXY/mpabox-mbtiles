@@ -23,7 +23,11 @@ yarn start  // 启动服务，默认服务地址是localhost:1234/api
 ```
 ## 查看结果
 启动项目 
+
 GET /api/tilesets                                 // 获取瓦片集列表
+
 GET /api/tilesets/:tilesetId/tilejson             // 获取瓦片集的描述信息
+
 GET /api/tilesets/:tilesetId/html                 // 预览瓦片集
+
 GET /api/tilesets/:tilesetId/{z}/{x}/{y}.{format} // 获取瓦片
