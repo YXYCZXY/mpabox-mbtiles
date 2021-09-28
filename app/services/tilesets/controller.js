@@ -5,7 +5,7 @@ const consolidate = require('consolidate')
 
 module.exports.list = (req, res, next) => {
   //瓦片集
-  const tilesetsDir = path.resolve(`../data/tilesets`)
+  const tilesetsDir = path.resolve(`./data/tilesets`)
 
   //读取所有文件名
   fs.readdir(tilesetsDir, (err, files) => {
@@ -22,7 +22,7 @@ module.exports.list = (req, res, next) => {
 module.exports.getTilejson = (req, res, next) => {
   //生成获取瓦片集的描述信息 json
   const { tilesetId } = req.params
-  const tilesetsDir = path.resolve(`../data/tilesets`)
+  const tilesetsDir = path.resolve(`./data/tilesets`)
   const source = `mbtiles://${tilesetsDir}/${tilesetId}.mbtiles?mode=ro`
   console.log(source,'source')
   new MBTiles(source, (err, source) => {
@@ -54,7 +54,7 @@ module.exports.getHtml = (req, res, next) => {
 module.exports.getTile = (req, res, next) => {
   //输出瓦片服务
   const { tilesetId, z, x, y } = req.params
-  const tilesetsDir = path.resolve(`../data/tilesets`)
+  const tilesetsDir = path.resolve(`./data/tilesets`)
   const source = `mbtiles://${tilesetsDir}/${tilesetId}.mbtiles?mode=ro`
 
   new MBTiles(source, (err, source) => {
