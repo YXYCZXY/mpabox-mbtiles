@@ -3,7 +3,7 @@
 ## 快速开始
 ```
 yarn        // 安装依赖
-yarn start  // 启动服务，默认服务地址是localhost:1234/api
+yarn start  // 启动服务，默认服务地址是localhost:1000/api
 ```
 
 ## 项目结构
